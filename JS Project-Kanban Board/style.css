@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+html {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+:root {
+  --background-color: #000000;
+  --background-button-color: #1a1a1a;
+  --background-task-color: #2a2a2a;
+  --delete-color: #ff4d4d;
+  --primary-text-color: white;
+
+  --nav-padding: 15px 30px;
+  --section-padding: 15px 30px;
+  --padding-s: 5px;
+  --padding-m: 10px;
+  --padding-l: 15px;
+  --padding-xl: 20px;
+  --padding-xxl: 30px;
+
+  --boarder-radius-s: 5px;
+  --boarder-radius-m: 10px;
+  --boarder-radius-l: 15px;
+  --boarder-radius-xl: 20px;
+  --boarder-radius-xxl: 25px;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+}
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  padding: var(--nav-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav button {
+  background-color: var(--background-button-color);
+  border: none;
+  outline: none;
+  color: var(--primary-text-color);
+  padding: var(--padding-m) var(--padding-l);
+  cursor: pointer;
+  border-radius: var(--boarder-radius-m);
+}
+section {
+  padding: var(--section-padding);
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  gap: var(--padding-xl);
+}
+section .task-column {
+  background-color: var(--background-button-color);
+  flex-grow: 1;
+  padding: var(--padding-m);
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-m);
+  border-radius: var(--boarder-radius-m);
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+section .task-column.hover-over {
+  border: 2px dashed var(--primary-text-color);
+  scale: 1.05;
+}
+section .task-column .heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .task-column .task {
+  background-color: var(--background-task-color);
+  padding: var(--padding-m);
+  border-radius: var(--boarder-radius-m);
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-s);
+  cursor: grab;
+}
+section .task-column .task button {
+  align-self: flex-end;
+  cursor: pointer;
+  padding: var(--padding-s) var(--padding-m);
+  border-radius: var(--boarder-radius-s);
+  border: none;
+  outline: none;
+  background-color: var(--delete-color);
+  color: var(--primary-text-color);
+}
