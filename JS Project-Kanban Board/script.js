@@ -14,7 +14,7 @@ function addTask(title, desc, colunm) {
             <h2>${title}</h2>
             <p>${desc}</p>
             <button>Delete</button>`;
-  todo.appendChild(div);
+  colunm.appendChild(div);
   div.addEventListener("drag", () => {
     dragElement = div;
   });
@@ -23,6 +23,7 @@ function addTask(title, desc, colunm) {
     div.remove();
     updateTaskCount();
   });
+
   return div;
 }
 function updateTaskCount() {
