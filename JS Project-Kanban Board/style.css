@@ -41,7 +41,7 @@ html {
   --boarder-radius-m: 10px;
   --boarder-radius-l: 15px;
   --boarder-radius-xl: 20px;
-  --boarder-radius-xxl: 25px;
+  --boarder-radius-xxl: 30px;
 }
 body {
   background-color: var(--background-color);
