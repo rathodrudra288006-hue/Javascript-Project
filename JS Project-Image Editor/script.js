@@ -10,6 +10,7 @@ const filters = {
   opacity: { value: 100, min: 0, max: 100, unit: "%" },
   invert: { value: 0, min: 0, max: 100, unit: "%" },
 };
+const filterContainer = document.querySelector(".filters");
 
 function createFilterElement(name, unit = "%", value, min, max) {
   const div = document.createElement("div");
