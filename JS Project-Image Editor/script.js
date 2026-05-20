@@ -31,5 +31,11 @@ function createFilterElement(name, unit = "%", value, min, max) {
   return div;
 }
 Object.keys(filters).forEach((filterName) => {
-  const filterElement = createFilterElement();
+  const filterElement = createFilterElement(
+    key,
+    filters[key].unit,
+    filters[key].value,
+    filters[key].min,
+    filters[key].max,
+  );
 });
