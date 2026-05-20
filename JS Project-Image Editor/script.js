@@ -33,7 +33,7 @@ function createFilterElement(name, unit = "%", value, min, max) {
 
   return div;
 }
-Object.keys(filters).forEach((filterName) => {
+Object.keys(filters).forEach((key) => {
   const filterElement = createFilterElement(
     key,
     filters[key].unit,
