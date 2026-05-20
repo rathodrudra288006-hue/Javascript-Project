@@ -39,4 +39,5 @@ Object.keys(filters).forEach((filterName) => {
     filters[key].min,
     filters[key].max,
   );
+  filterContainer.appendChild(filterElement);
 });
