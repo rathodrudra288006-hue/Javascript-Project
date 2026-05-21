@@ -1,5 +1,5 @@
 const filters = {
-  brightness: { value: 100, min: 0, max: 200, unit: "%" },
+  Brightness: { value: 100, min: 0, max: 200, unit: "%" },
   contrast: { value: 100, min: 0, max: 200, unit: "%" },
   exposure: { value: 100, min: 0, max: 200, unit: "%" },
   saturation: { value: 100, min: 0, max: 200, unit: "%" },
@@ -10,9 +10,12 @@ const filters = {
   opacity: { value: 100, min: 0, max: 100, unit: "%" },
   invert: { value: 0, min: 0, max: 100, unit: "%" },
 };
+const imageCanvas = document.querySelector("#image-canvas");
 const filterContainer = document.querySelector(".filters");
-
-const filterContainer = document.querySelector(".filters");
+const imgInput = document.querySelector("#image-input");
+const canvasCtx = imageCanvas.getContext("2d");
+let file = null;
+let imagess = null;
 
 function createFilterElement(name, unit = "%", value, min, max) {
   const div = document.createElement("div");
@@ -31,9 +34,13 @@ function createFilterElement(name, unit = "%", value, min, max) {
   div.appendChild(p);
   div.appendChild(input);
 
+  input.addEventListener("input", (event) => {
+    console.log(input.value);
+  });
+
   return div;
 }
-Object.keys(filters).forEach((filterName) => {
+Object.keys(filters).forEach((key) => {
   const filterElement = createFilterElement(
     key,
     filters[key].unit,
@@ -43,3 +50,21 @@ Object.keys(filters).forEach((filterName) => {
   );
   filterContainer.appendChild(filterElement);
 });
+
+imgInput.addEventListener("change", (event) => {
+  const file = event.target.files[0];
+  const img = new Image();
+  const imagePlaceholder = document.querySelector(".placeholder");
+  imagePlaceholder.style.display = "none";
+  img.src = URL.createObjectURL(file);
+  img.onload = () => {
+    imagess = img;
+    imageCanvas.width = img.width;
+    imageCanvas.height = img.height;
+    canvasCtx.drawImage(img, 0, 0);
+  };
+});
+function Applyblur() {
+  canvasCtx.filter = `blur(5px)`;
+  canvasCtx.drawImage(imagess, 0, 0);
+}
