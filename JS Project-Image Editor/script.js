@@ -1,5 +1,5 @@
 const filters = {
-  brightness: { value: 100, min: 0, max: 200, unit: "%" },
+  Brightness: { value: 100, min: 0, max: 200, unit: "%" },
   contrast: { value: 100, min: 0, max: 200, unit: "%" },
   exposure: { value: 100, min: 0, max: 200, unit: "%" },
   saturation: { value: 100, min: 0, max: 200, unit: "%" },
