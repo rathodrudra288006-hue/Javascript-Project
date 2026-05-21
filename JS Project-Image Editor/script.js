@@ -1,7 +1,7 @@
 const filters = {
   Brightness: { value: 100, min: 0, max: 200, unit: "%" },
-  contrast: { value: 100, min: 0, max: 200, unit: "%" },
-  exposure: { value: 100, min: 0, max: 200, unit: "%" },
+  Contrast: { value: 100, min: 0, max: 200, unit: "%" },
+  Exposure: { value: 100, min: 0, max: 200, unit: "%" },
   saturation: { value: 100, min: 0, max: 200, unit: "%" },
   hueRotation: { value: 0, min: 0, max: 360, unit: "deg" },
   blur: { value: 0, min: 0, max: 20, unit: "px" },
