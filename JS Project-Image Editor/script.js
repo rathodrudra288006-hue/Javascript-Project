@@ -1,14 +1,14 @@
 const filters = {
   Brightness: { value: 100, min: 0, max: 200, unit: "%" },
-  contrast: { value: 100, min: 0, max: 200, unit: "%" },
-  exposure: { value: 100, min: 0, max: 200, unit: "%" },
-  saturation: { value: 100, min: 0, max: 200, unit: "%" },
-  hueRotation: { value: 0, min: 0, max: 360, unit: "deg" },
-  blur: { value: 0, min: 0, max: 20, unit: "px" },
-  grayscale: { value: 0, min: 0, max: 100, unit: "%" },
-  sepia: { value: 0, min: 0, max: 100, unit: "%" },
-  opacity: { value: 100, min: 0, max: 100, unit: "%" },
-  invert: { value: 0, min: 0, max: 100, unit: "%" },
+  Contrast: { value: 100, min: 0, max: 200, unit: "%" },
+  Exposure: { value: 100, min: 0, max: 200, unit: "%" },
+  Saturation: { value: 100, min: 0, max: 200, unit: "%" },
+  HueRotation: { value: 0, min: 0, max: 360, unit: "deg" },
+  Blur: { value: 0, min: 0, max: 20, unit: "px" },
+  Grayscale: { value: 0, min: 0, max: 100, unit: "%" },
+  Sepia: { value: 0, min: 0, max: 100, unit: "%" },
+  Opacity: { value: 100, min: 0, max: 100, unit: "%" },
+  Invert: { value: 0, min: 0, max: 100, unit: "%" },
 };
 const imageCanvas = document.querySelector("#image-canvas");
 const filterContainer = document.querySelector(".filters");
