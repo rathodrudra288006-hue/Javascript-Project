@@ -35,7 +35,7 @@ function createFilterElement(name, unit = "%", value, min, max) {
   div.appendChild(input);
 
   input.addEventListener("input", (event) => {
-    console.log(input.value);
+    filters[name].value = input.value;
   });
 
   return div;
